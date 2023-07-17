@@ -1,0 +1,71 @@
+@import '../../styles/mixins';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1160px;
+  height: 81.5px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  @include size(181px, 27px);
+  object-fit: cover;
+}
+
+.search {
+  border: none;
+  background-color: #fff;
+  background-image: url("../../assets/search-icon.svg");
+  @include background-image;
+  @include size(20px, 20px);
+  cursor: pointer;
+}
+
+.filterInput {
+  outline: none;
+  position: absolute;
+  right: 40px;
+  @include size (250px, 20px);
+  display: none;
+  opacity: 0;
+}
+
+.opened {
+  display: block;
+  opacity: 1;
+}
+
+.menuBtn {
+  display: none;
+  border: none;
+  background-color: #fff;
+  background-image: url("../../assets/sidemenu-icon.svg");
+  @include background-image;
+  @include size(28px, 20px);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1160px) {
+  .header {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .menuBtn {
+    display: block;
+  }
+
+  .logo {
+    @include size(163px, 24px);
+  }
+}
