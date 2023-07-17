@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  &Name {
+    @include text-format(500, 1rem, 1rem);
+    margin: 0;
+  }
+  &Button {
+    border: none;
+    background-color: #fff;
+    background-image: url("../../assets/menu-icon.svg");
+    @include background-image;
+    @include size(10px, 6px);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .item {
+    border-bottom: 1px solid #E9E9E9;
+    padding-bottom: 1rem;
+  }
+}
