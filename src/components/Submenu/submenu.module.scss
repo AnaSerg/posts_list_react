@@ -1,0 +1,70 @@
+@import '../../styles/mixins';
+
+.submenu {
+  box-sizing: border-box;
+  @include list-initial-style;
+  @include size (176px, 173px);
+  border: 1px solid #E9E9E9;
+  background: #FFF;
+  margin: 0;
+  padding: 1.3rem 1rem 1.3rem 1.3rem;
+  z-index: 100;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include text-format(400, 0.81rem, 0.81rem);
+  padding: 8px 0;
+  border-bottom: 1px solid #E9E9E9;
+  &:first-of-type {
+    padding: 0 0 8px 0;
+  }
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.button {
+  border: none;
+  background-color: #fff;
+  background-image: url("../../assets/submenu-icon.svg");
+  @include background-image;
+  @include size(12px, 8px);
+  cursor: pointer;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #969696;
+    padding-left: 0.5rem;
+  }
+}
+
+ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+ul li ul li {
+  width: 100%;
+}
