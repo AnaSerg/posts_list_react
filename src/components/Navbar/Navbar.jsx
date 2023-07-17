@@ -47,7 +47,7 @@ export const Navbar = ({isMobileMenuOpen, closeMobileMenu}) => {
                                 <MenuItem key={item} item={item} />
                             ))}
                         </ul>
-                        <a href="#" className={styles.button}>Buy Now</a>
+                        <button className={styles.button}>Buy Now</button>
                     </div>
                 </div>
             ) : (
@@ -59,7 +59,7 @@ export const Navbar = ({isMobileMenuOpen, closeMobileMenu}) => {
                             ))}
                         </ul>
                     )}
-                    <a href="#" className={styles.button} >Buy Now</a>
+                    <button href="/" className={styles.button} >Buy Now</button>
                 </>
             )}
         </nav>

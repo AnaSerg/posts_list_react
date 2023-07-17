@@ -24,13 +24,14 @@
 }
 
 .button {
-  display: block;
   @include text-format(500, 1rem, 1rem);
+  border: none;
+  background-color: #fff;
   margin-left: 1.8rem;
   padding: 0;
-  text-decoration: none;
   color: #000;
   align-self: center;
+  cursor: pointer;
 }
 
 .mobileMenu {
