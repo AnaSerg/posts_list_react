@@ -1,0 +1,26 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-format($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin list-initial-style {
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin background-image {
+  background-repeat: no-repeat;
+  background-position: center;
+}

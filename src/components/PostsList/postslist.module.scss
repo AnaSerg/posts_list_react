@@ -1,0 +1,21 @@
+@import '../../styles/mixins';
+
+.list {
+  @include list-initial-style;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1160px;
+  margin: 3rem auto 10rem;
+}
+
+.error {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 450px) {
+  .list {
+    margin: 1rem;
+  }
+}
